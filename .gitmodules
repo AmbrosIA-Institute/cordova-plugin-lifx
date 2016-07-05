@@ -1,0 +1,3 @@
+[submodule "src/android/lifx-sdk-android"]
+	path = src/android/lifx-sdk-android
+        url = https://github.com/AmbrosIA-Institute/lifx-sdk-android.git

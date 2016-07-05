@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="institute.ambrosia.lifxplugin"
+    version="0.1.0">
+    <name>LIFXPlugin</name>
+    <description>An LIFX plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova, lifx</keywords>
+    <repo></repo>
+    <issue></issue>
+    <js-module src="www/LIFX.js" name="LIFXPlugin">
+        <clobbers target="LIFXPlugin" />
+    </js-module>
+    <!-- android -->
+    <platform name="android">
+
+        <source-file src="src/android/LIFXPlugin.java" target-dir="src/institute/ambrosia/lifx" />
+
+        <!-- LIFX sources begin -->
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/light/LFXLight.java" target-dir="src/lifx/java/android/light" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/light/LFXLightCollection.java" target-dir="src/lifx/java/android/light" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/light/internal/LFXAllLightsCollection.java" target-dir="src/lifx/java/android/light/internal" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/light/LFXTaggedLightCollection.java" target-dir="src/lifx/java/android/light" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/network_context/internal/routing_table/LFXRoutingTable.java" target-dir="src/lifx/java/android/network_context/internal/routing_table" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/network_context/internal/transport_manager/LFXTransportManager.java" target-dir="src/lifx/java/android/network_context/internal/transport_manager" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/network_context/internal/transport_manager/lan/gateway_discovery/LFXGatewayDiscoveryTableEntry.java" target-dir="src/lifx/java/android/network_context/internal/transport_manager/lan/gateway_discovery" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/network_context/internal/transport_manager/lan/gateway_discovery/LFXGatewayDiscoveryController.java" target-dir="src/lifx/java/android/network_context/internal/transport_manager/lan/gateway_discovery" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/network_context/internal/transport_manager/lan/LFXLANTransportManager.java" target-dir="src/lifx/java/android/network_context/internal/transport_manager/lan" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/network_context/internal/transport_manager/gateway_connection/LFXTCPGatewayConnection.java" target-dir="src/lifx/java/android/network_context/internal/transport_manager/gateway_connection" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/network_context/internal/transport_manager/gateway_connection/LFXSocketGeneric.java" target-dir="src/lifx/java/android/network_context/internal/transport_manager/gateway_connection" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/network_context/internal/transport_manager/gateway_connection/LFXSocketTCP.java" target-dir="src/lifx/java/android/network_context/internal/transport_manager/gateway_connection" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/network_context/internal/transport_manager/gateway_connection/LFXGatewayConnection.java" target-dir="src/lifx/java/android/network_context/internal/transport_manager/gateway_connection" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/network_context/internal/transport_manager/gateway_connection/LFXSocketUDP.java" target-dir="src/lifx/java/android/network_context/internal/transport_manager/gateway_connection" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/network_context/internal/transport_manager/gateway_connection/LFXUDPGatewayConnection.java" target-dir="src/lifx/java/android/network_context/internal/transport_manager/gateway_connection" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/network_context/LFXNetworkContext.java" target-dir="src/lifx/java/android/network_context" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/util/LFXByteUtils.java" target-dir="src/lifx/java/android/util" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/util/LFXTimerUtils.java" target-dir="src/lifx/java/android/util" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/util/LFXNetworkUtils.java" target-dir="src/lifx/java/android/util" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/util/LFXLog.java" target-dir="src/lifx/java/android/util" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/client/LFXClient.java" target-dir="src/lifx/java/android/client" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/LFXDeviceMapping.java" target-dir="src/lifx/java/android/entities/internal" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/LFXTarget.java" target-dir="src/lifx/java/android/entities/internal" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/LFXMessage.java" target-dir="src/lifx/java/android/entities/internal" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/LFXBinaryTypes.java" target-dir="src/lifx/java/android/entities/internal" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/LFXBinaryTargetID.java" target-dir="src/lifx/java/android/entities/internal" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/LFXTagMapping.java" target-dir="src/lifx/java/android/entities/internal" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/LFXGatewayDescriptor.java" target-dir="src/lifx/java/android/entities/internal" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/LFXMessageObservationDescriptor.java" target-dir="src/lifx/java/android/entities/internal" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/structle/LxProtocolSensor.java" target-dir="src/lifx/java/android/entities/internal/structle" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/structle/LxProtocol.java" target-dir="src/lifx/java/android/entities/internal/structle" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/structle/LxProtocolDevice.java" target-dir="src/lifx/java/android/entities/internal/structle" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/structle/LxProtocolWifi.java" target-dir="src/lifx/java/android/entities/internal/structle" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/structle/Lx.java" target-dir="src/lifx/java/android/entities/internal/structle" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/structle/LxProtocolWan.java" target-dir="src/lifx/java/android/entities/internal/structle" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/structle/LxProtocolLight.java" target-dir="src/lifx/java/android/entities/internal/structle" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/structle/StructleTypes.java" target-dir="src/lifx/java/android/entities/internal/structle" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/LFXBinaryPath.java" target-dir="src/lifx/java/android/entities/internal" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/internal/LFXSiteID.java" target-dir="src/lifx/java/android/entities/internal" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/LFXLightTarget.java" target-dir="src/lifx/java/android/entities" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/LFXTypes.java" target-dir="src/lifx/java/android/entities" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/entities/LFXHSBKColor.java" target-dir="src/lifx/java/android/entities" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/constant/LFXSDKConstants.java" target-dir="src/lifx/java/android/constant" />
+        <source-file src="src/android/lifx-sdk-android/library/src/main/java/lifx/java/android/internal/LFXWiFiObserver.java" target-dir="src/lifx/java/android/internal" />
+        <!-- LIFX sources end -->
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="LIFXPlugin" >
+                <param name="android-package" value="institute.ambrosia.lifx.LIFXPlugin"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+            <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+            <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+            <uses-permission android:name="android.permission.BLUETOOTH"/> <!-- should not need this -->
+        </config-file>
+
+    </platform>
+</plugin>
